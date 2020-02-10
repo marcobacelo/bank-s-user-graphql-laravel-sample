@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+  app:
+    image: ambientum/php:7.2-nginx
+    container_name: api-graphql-app
+    volumes:
+      - .:/var/www/app
+    ports:
+      - "32900:8080"
+  
