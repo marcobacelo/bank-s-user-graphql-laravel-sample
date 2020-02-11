@@ -1,11 +1,25 @@
-version: '2'
+version: '2.1'
 
 services:
-  app:
+  laravel_app:
     image: ambientum/php:7.2-nginx
     container_name: api-graphql-app
     volumes:
       - .:/var/www/app
     ports:
       - "32900:8080"
-  
+  mysql_app:
+    image: mysql:5.6.40
+    container_name: 'mysql-app'
+    volumes: 
+      - /my/custom:/etc/mysql/conf.d
+    ports:
+      - "32901:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: 'root'
+      MYSQL_DATABASE: 'database-app'
+    healthcheck:
+      test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost"]
+      timeout: 3s
+      retries: 10
+    
