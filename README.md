@@ -21,6 +21,14 @@ In your application directory, run:
 docker-compose up -d
 ```
 
+### Setting database migrations ###
+
+Run the comand below and type 'yes' for all:
+
+```
+sh run.sh
+```
+
 #### Composing down :( ####
 
 To shut down the application, enter your application directory and run:
