@@ -17,7 +17,7 @@ https://docs.docker.com/compose/install/#install-compose
 #### Composing up! ####
 In your application directory, run:
 
-```bash
+```
 docker-compose up -d
 ```
 
@@ -25,6 +25,14 @@ docker-compose up -d
 
 To shut down the application, enter your application directory and run:
 
-```bash
+```
 docker-compose down
+```
+
+## API's URL ##
+
+#### For some reasons, I haven't fully developed the API ####
+
+```
+http://localhost:32900/graphiql
 ```

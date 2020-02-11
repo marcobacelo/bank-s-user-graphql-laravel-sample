@@ -1,8 +1,9 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\transactions;
 
-class DatabaseSeeder extends Seeder
+class TransactionSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,6 +12,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $this->call(TransactionSeeder::class);
+        transactions::create([
+            'balance' => 1000,
+        ]);
     }
 }
