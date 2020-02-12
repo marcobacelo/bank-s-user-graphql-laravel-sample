@@ -13,7 +13,11 @@ class TransactionTableSeeder extends Seeder
     public function run()
     {
         Transaction::create([
-            'balance' => 1000,
-        ]);
+            'balance' => 1000
+        ],
+        Transaction::create([
+            'balance' => 9500
+        ])
+    );
     }
 }
