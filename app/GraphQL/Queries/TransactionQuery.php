@@ -2,7 +2,7 @@
 
 namespace App\GraphQL\Queries;
 
-use App\transactions;
+use App\Transaction;
 use GraphQL\Type\Definition\Type;
 use Rebing\GraphQL\Support\Facades\GraphQL;
 use Rebing\GraphQL\Support\Query;
@@ -15,7 +15,7 @@ class WineQuery extends Query
 
     public function type(): Type
     {
-        return GraphQL::type('transaction');
+        return GraphQL::type('Transaction');
     }
 
     public function args():array
@@ -31,6 +31,6 @@ class WineQuery extends Query
 
     public function resolve($root, $args)
     {
-        return transactions::findOrFail($args['id']);
+        return Transaction::findOrFail($args['id']);
     }
 }

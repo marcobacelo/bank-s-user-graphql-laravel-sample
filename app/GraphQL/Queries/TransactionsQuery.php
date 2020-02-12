@@ -1,12 +1,12 @@
 <?php
 namespace App\GraphQL\Queries;
 
-use App\transactions;
+use App\Transaction;
 use GraphQL\Type\Definition\Type;
 use Rebing\GraphQL\Support\Facades\GraphQL;
 use Rebing\GraphQL\Support\Query;
 
-class TransactionsQuery extends Query
+class WinesQuery extends Query
 {
     protected $attributes = [
         'name' => 'transactions',
@@ -14,11 +14,11 @@ class TransactionsQuery extends Query
 
     public function type(): Type
     {
-        return Type::listOf(GraphQL::type('transactions'));
+        return Type::listOf(GraphQL::type('Transaction'));
     }
 
     public function resolve($root, $args)
     {
-        return transactions::all();
+        return Transaction::all();
     }
 }
