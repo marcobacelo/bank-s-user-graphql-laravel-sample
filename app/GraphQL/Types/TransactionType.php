@@ -5,7 +5,7 @@ use App\Transaction;
 use GraphQL\Type\Definition\Type;
 use Rebing\GraphQL\Support\Type as GraphQLType;
 
-class WineType extends GraphQLType
+class TransactionType extends GraphQLType
 {
     protected $attributes = [
         'name' => 'Transaction',
@@ -20,7 +20,7 @@ class WineType extends GraphQLType
                 'type' => Type::nonNull(Type::int()),
                 'description' => 'Id of the balance',
             ],
-            'name' => [
+            'balance' => [
                 'type' => Type::nonNull(Type::int()),
                 'description' => 'The balance of the bank account',
             ]

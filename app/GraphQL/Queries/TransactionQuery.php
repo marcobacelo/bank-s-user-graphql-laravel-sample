@@ -7,7 +7,7 @@ use GraphQL\Type\Definition\Type;
 use Rebing\GraphQL\Support\Facades\GraphQL;
 use Rebing\GraphQL\Support\Query;
 
-class WineQuery extends Query
+class TransactionQuery extends Query
 {
     protected $attributes = [
         'name' => 'transaction',
