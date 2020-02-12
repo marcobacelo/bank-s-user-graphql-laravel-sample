@@ -101,6 +101,7 @@ return [
     'schemas' => [
         'default' => [
             'query' => [
+                'transaction' => App\GraphQL\Queries\TransactionQuery::class,
                 'transactions' => App\GraphQL\Queries\TransactionsQuery::class,
             ]
         ],
