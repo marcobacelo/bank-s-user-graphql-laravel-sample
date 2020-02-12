@@ -44,3 +44,13 @@ docker-compose down
 ```
 http://localhost:32900/graphiql
 ```
+
+#### Mutation example ####
+
+```
+{
+  transactions {
+    balance
+  }
+}
+```
